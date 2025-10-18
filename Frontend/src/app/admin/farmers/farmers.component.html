@@ -1,0 +1,62 @@
+<div class="farmers-container">
+  <h2>Farmers List</h2>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <table *ngIf="farmers.length > 0" class="farmers-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let farmer of farmers">
+        <ng-container *ngIf="editFarmerId === farmer.id; else viewMode">
+          <td>{{ farmer.id }}</td>
+          <td><input [(ngModel)]="editedFarmer.name" /></td>
+          <td><input [(ngModel)]="editedFarmer.email" /></td>
+          <td><input [(ngModel)]="editedFarmer.phone" /></td>
+          <td>
+            <select [(ngModel)]="editedFarmer.active">
+              <option [value]="true">Active</option>
+              <option [value]="false">Inactive</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="saveEdit()">Save</button>
+            <button (click)="cancelEdit()">Cancel</button>
+          </td>
+        </ng-container>
+
+        <ng-template #viewMode>
+          <td>{{ farmer.id }}</td>
+          <td>{{ farmer.name }}</td>
+          <td>
+            <a href="mailto:{{ farmer.email }}">{{ farmer.email }}</a>
+          </td>
+          <td>
+            <a href="tel:{{ farmer.phone }}">{{ farmer.phone }}</a>
+          </td>
+          <td>
+            <span
+              [class.active]="farmer.active"
+              [class.inactive]="!farmer.active"
+            >
+              {{ farmer.active ? "Active" : "Inactive" }}
+            </span>
+          </td>
+          <td><button (click)="startEdit(farmer)">Edit</button></td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="farmers.length === 0 && !errorMessage" class="no-farmers">
+    No farmers found.
+  </div>
+</div>

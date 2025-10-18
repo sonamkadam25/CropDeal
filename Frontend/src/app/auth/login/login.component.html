@@ -1,0 +1,57 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>🌾 Login</h2>
+    <p class="tagline">Welcome back to CropDeal</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Enter your email"
+      />
+
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+          placeholder="Create a password"
+        />
+        <span class="toggle-icon" (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+        </span>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <p>New user? <a routerLink="/auth/register">Register here</a></p>
+      <p><a routerLink="/auth/forgot-password">Forgot password?</a></p>
+    </div>
+
+    <p class="message">{{ message }}</p>
+  </div>
+</div>
+
+<!-- Toast -->
+<div
+  class="toast-container position-fixed bottom-0 end-0 p-3"
+  style="z-index: 1050"
+>
+  <div
+    class="toast align-items-center text-white bg-success border-0"
+    role="alert"
+    [class.show]="showToast"
+    [class.hide]="!showToast"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="d-flex">
+      <div class="toast-body">
+        {{ toastMessage }}
+      </div>
+    </div>
+  </div>
+</div>

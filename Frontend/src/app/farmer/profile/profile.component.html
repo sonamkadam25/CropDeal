@@ -1,0 +1,103 @@
+<div class="profile-container" *ngIf="farmer">
+  <form
+    *ngIf="updateMode"
+    [formGroup]="profileForm"
+    (ngSubmit)="saveProfile()"
+    class="profile-card"
+  >
+    <h2>Edit Farmer Profile</h2>
+
+    <div class="profile-field">
+      <label>Name</label>
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div class="profile-field">
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+    </div>
+
+    <div class="profile-field">
+      <label>Phone</label>
+      <input type="text" formControlName="phone" />
+    </div>
+
+    <div class="profile-field">
+      <label>Status</label>
+      <select formControlName="active">
+        <option [value]="true">Active</option>
+        <option [value]="false">Inactive</option>
+      </select>
+    </div>
+
+    <button type="submit">Save Profile</button>
+  </form>
+
+  <div *ngIf="!updateMode" class="profile-card">
+    <h2>Farmer Profile</h2>
+
+    <div class="profile-field">
+      <label>Farmer Id</label>
+      <span>{{ farmer.id }}</span>
+    </div>
+
+    <div class="profile-field">
+      <label>Name</label>
+      <span>{{ farmer.name }}</span>
+    </div>
+
+    <div class="profile-field">
+      <label>Email</label>
+      <span>{{ farmer.email }}</span>
+    </div>
+
+    <div class="profile-field">
+      <label>Phone</label>
+      <span>{{ farmer.phone }}</span>
+    </div>
+
+    <div class="profile-field">
+      <label>Status</label>
+      <span [ngClass]="farmer.active ? 'status-active' : 'status-inactive'">
+        {{ farmer.active ? "Active" : "Inactive" }}
+      </span>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button (click)="enableEdit()">Update Profile</button>
+    <button (click)="toggleBankForm()">Add Bank Details</button>
+  </div>
+</div>
+
+<div class="profile-container" *ngIf="showBankForm">
+  <form
+    [formGroup]="bankForm"
+    (ngSubmit)="submitBankDetails()"
+    class="profile-card"
+  >
+    <h2>Bank Details</h2>
+
+    <div class="profile-field">
+      <label>Account Number</label>
+      <input type="text" formControlName="accountNumber" />
+    </div>
+
+    <div class="profile-field">
+      <label>IFSC Code</label>
+      <input type="text" formControlName="ifsc" />
+    </div>
+
+    <div class="profile-field">
+      <label>Bank Name</label>
+      <input type="text" formControlName="bankName" />
+    </div>
+
+    <div class="button-group">
+      <button type="submit">Save Bank Details</button>
+      <button type="button" (click)="toggleBankForm()">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>

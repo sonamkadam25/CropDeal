@@ -1,0 +1,31 @@
+.notification-box {
+  border: 2px solid #2ecc71;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #e9f8ef;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification-box h3 {
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.notification-box h4 {
+  margin-top: 15px;
+  color: #34495e;
+}
+
+.notification-box p {
+  margin: 4px 0;
+}
+
+.notification-box ul {
+  padding-left: 20px;
+}
+
+.notification-box li {
+  list-style-type: disc;
+  margin: 3px 0;
+}

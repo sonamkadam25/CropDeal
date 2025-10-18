@@ -1,0 +1,49 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>🌾 Sign Up</h2>
+    <div class="role-select">
+      <label for="role">I am a:</label>
+      <select id="role" [(ngModel)]="selectedRole" name="role">
+        <option value="" disabled selected>Select Role</option>
+        <option value="farmer">Farmer</option>
+        <option value="dealer">Dealer</option>
+      </select>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <label>Name</label>
+      <input type="text" formControlName="name" placeholder="Enter your name" />
+
+      <label>Email</label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Enter your email"
+      />
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+          placeholder="Create a password"
+        />
+        <span class="toggle-icon" (click)="togglePasswordVisibility()">
+          <i [class]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+        </span>
+      </div>
+
+      <label>Phone</label>
+      <input
+        type="text"
+        formControlName="phone"
+        placeholder="Enter your phone number"
+      />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="login-link">
+      Already a user? <a routerLink="/auth/login">Login here</a>
+    </p>
+  </div>
+</div>

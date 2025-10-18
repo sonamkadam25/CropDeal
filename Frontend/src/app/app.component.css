@@ -1,0 +1,48 @@
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #559758e5, #559758e5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #c8e6c9;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  margin-right: 1.2rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #ecf4e3 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #c8e6c9 !important;
+  cursor: pointer;
+}
+
+.router-link-active,
+.active {
+  color: #ffd54f !important;
+  border-bottom: 2px solid #ffd54f;
+}
+
+.search-input-wrapper {
+  margin-right: 3rem;
+}
+
+.search-input-wrapper input {
+  padding: 7px 72px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.95rem;
+  width: 265px;
+}

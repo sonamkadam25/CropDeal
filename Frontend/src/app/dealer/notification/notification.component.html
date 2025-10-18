@@ -1,0 +1,15 @@
+<div
+  class="notification-box"
+  *ngIf="crop && notifiedDealers && notifiedDealers.length > 0"
+>
+  <h3>New Crop Posted</h3>
+  <p><strong>Name:</strong> {{ crop.name }}</p>
+  <p><strong>Type:</strong> {{ crop.type }}</p>
+  <p><strong>Quantity:</strong> {{ crop.quantity }} kg</p>
+  <p><strong>Location:</strong> {{ crop.location }}</p>
+
+  <h4>Notified Dealers:</h4>
+  <ul>
+    <li *ngFor="let dealerId of notifiedDealers">Dealer ID: {{ dealerId }}</li>
+  </ul>
+</div>

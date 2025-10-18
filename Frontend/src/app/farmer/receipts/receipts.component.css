@@ -1,0 +1,67 @@
+.receipts-container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 25px;
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.receipts-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.receipt-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.receipt-card:hover {
+  background-color: #f1f9ff;
+  border-color: #bcdfff;
+}
+
+.receipt-card p {
+  margin: 8px 0;
+  color: #34495e;
+  font-size: 15px;
+}
+
+.loading-text,
+.error-text,
+.no-receipts {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.error-text {
+  color: #e74c3c;
+}
+
+.no-receipts {
+  color: #7f8c8d;
+}
+
+.receipt-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.receipt-card button:hover {
+  background-color: #27ae60;
+}

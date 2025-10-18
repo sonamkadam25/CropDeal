@@ -1,0 +1,85 @@
+.profile-container {
+  max-width: 500px;
+  margin: 110px auto;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-field label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 6px;
+}
+
+.profile-field span,
+.profile-field input,
+.profile-field select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: red;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button[type="button"] {
+  background-color: #e74c3c;
+}
+
+button[type="button"]:hover {
+  background-color: #c0392b;
+}

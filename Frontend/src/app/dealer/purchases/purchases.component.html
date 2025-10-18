@@ -1,0 +1,55 @@
+<div class="purchase-container" *ngIf="crop && !viewSuccessPage">
+  <h2>Crop Details</h2>
+
+  <div class="crop-info">
+    <div class="info-section">
+      <h3>{{ crop.name | titlecase }}</h3>
+      <p><strong>Type:</strong> {{ crop.type }}</p>
+      <p><strong>Quantity:</strong> {{ crop.quantity }} kg</p>
+      <p><strong>Price:</strong> {{ crop.pricePerUnit }} Rs/kg</p>
+      <p><strong>Location:</strong> {{ crop.location }}</p>
+    </div>
+
+    <div class="info-section">
+      <h4>Farmer Info</h4>
+      <p><strong>Farmer Id:</strong> {{ crop.farmer.id }}</p>
+      <p><strong>Name:</strong> {{ crop.farmer.name }}</p>
+      <p><strong>Email:</strong> {{ crop.farmer.email }}</p>
+      <p><strong>Phone:</strong> {{ crop.farmer.phone }}</p>
+      <p><strong>Active:</strong> {{ crop.farmer.active ? "Yes" : "No" }}</p>
+    </div>
+
+    <div class="info-section">
+      <h4>Bank Details</h4>
+      <p><strong>Bank Name:</strong> {{ crop.farmer.bankDetails.bankName }}</p>
+      <p>
+        <strong>Account Number:</strong>
+        {{ crop.farmer.bankDetails.accountNumber }}
+      </p>
+      <p><strong>IFSC:</strong> {{ crop.farmer.bankDetails.ifsc }}</p>
+    </div>
+  </div>
+
+  <div class="purchase-action">
+    <button (click)="purchaseCrop()" class="purchase-button">
+      Pay & Purchase
+    </button>
+    <!-- <p *ngIf="purchaseSuccess" class="success-msg">Purchase successful ✅</p> -->
+  </div>
+</div>
+
+<div *ngIf="!crop" class="loading">Loading crop details...</div>
+
+<div *ngIf="viewSuccessPage" class="success-page">
+  <h2 class="success-heading">✅ Payment Successful</h2>
+  <div class="success-details">
+    <p><strong>Payment ID:</strong> {{ orderSummary?.paymentId }}</p>
+    <p><strong>Dealer ID:</strong> {{ orderSummary?.dealerId }}</p>
+    <p><strong>Farmer ID:</strong> {{ orderSummary?.farmerId }}</p>
+    <p><strong>Amount Paid:</strong> ₹{{ orderSummary?.amount / 100 }}</p>
+    <p><strong>Product:</strong> {{ orderSummary?.productName | titlecase }}</p>
+    <p>
+      <strong>Timestamp:</strong> {{ orderSummary?.timestamp | date : "short" }}
+    </p>
+  </div>
+</div>

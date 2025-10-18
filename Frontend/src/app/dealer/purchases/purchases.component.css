@@ -1,0 +1,98 @@
+.purchase-container {
+  max-width: 900px;
+  margin: 140px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #27ae60;
+  font-size: 2rem;
+}
+
+.crop-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.info-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #27ae60;
+}
+
+.info-section h3,
+.info-section h4 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.info-section p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.purchase-action {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.purchase-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchase-button:hover {
+  background-color: #219653;
+}
+
+.success-msg {
+  color: #2ecc71;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 30px;
+}
+
+.success-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #e8f9f1;
+  border-left: 6px solid #27ae60;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.success-heading {
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.success-details p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}

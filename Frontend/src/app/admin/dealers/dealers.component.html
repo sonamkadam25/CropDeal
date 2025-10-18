@@ -1,0 +1,62 @@
+<div class="dealers-container">
+  <h2>Dealers List</h2>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <table *ngIf="dealers.length > 0" class="dealers-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dealer of dealers">
+        <ng-container *ngIf="editDealerId === dealer.id; else viewMode">
+          <td>{{ dealer.id }}</td>
+          <td><input [(ngModel)]="editedDealer.name" /></td>
+          <td><input [(ngModel)]="editedDealer.email" /></td>
+          <td><input [(ngModel)]="editedDealer.phone" /></td>
+          <td>
+            <select [(ngModel)]="editedDealer.active">
+              <option [value]="true">Active</option>
+              <option [value]="false">Inactive</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="saveEdit()">Save</button>
+            <button (click)="cancelEdit()">Cancel</button>
+          </td>
+        </ng-container>
+
+        <ng-template #viewMode>
+          <td>{{ dealer.id }}</td>
+          <td>{{ dealer.name }}</td>
+          <td>
+            <a href="mailto:{{ dealer.email }}">{{ dealer.email }}</a>
+          </td>
+          <td>
+            <a href="tel:{{ dealer.phone }}">{{ dealer.phone }}</a>
+          </td>
+          <td>
+            <span
+              [class.active]="dealer.active"
+              [class.inactive]="!dealer.active"
+            >
+              {{ dealer.active ? "Active" : "Inactive" }}
+            </span>
+          </td>
+          <td><button (click)="startEdit(dealer)">Edit</button></td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="dealers.length === 0 && !errorMessage" class="no-dealers">
+    No dealers found.
+  </div>
+</div>

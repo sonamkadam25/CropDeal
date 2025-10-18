@@ -1,0 +1,44 @@
+<div class="post-crop-container">
+  <h2>Post New Crop</h2>
+
+  <form [formGroup]="cropForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Type:</label>
+      <input
+        type="text"
+        formControlName="type"
+        placeholder="vegetable or fruit"
+      />
+    </div>
+
+    <div>
+      <label>Name:</label>
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div>
+      <label>Quantity (kg):</label>
+      <input type="number" formControlName="quantity" />
+    </div>
+
+    <div>
+      <label>Price (kg):</label>
+      <input type="number" formControlName="pricePerUnit" />
+    </div>
+
+    <div>
+      <label>Location:</label>
+      <input type="text" formControlName="location" />
+    </div>
+
+    <button type="submit">Post Crop</button>
+  </form>
+
+  <p class="message">{{ message }}</p>
+
+  <app-notification
+    *ngIf="postedCrop"
+    [crop]="postedCrop.crop"
+    [notifiedDealers]="postedCrop.notifiedDealers"
+  ></app-notification>
+</div>

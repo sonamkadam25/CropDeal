@@ -1,0 +1,66 @@
+.post-crop-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-crop-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+form div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+  background-color: #eef9ff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #2980b9;
+}

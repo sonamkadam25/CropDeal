@@ -1,0 +1,169 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4">
+  <a class="navbar-brand" routerLink="/">🌾 CropDeal</a>
+
+  <!-- <a class="navbar-brand" routerLink="/">🌽 CropDeal</a> -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item search-input-wrapper">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search Crops..."
+          [(ngModel)]="searchQuery"
+          (input)="onSearchChange()"
+        />
+      </li>
+
+      <ng-container *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a
+            routerLink="/auth/register"
+            routerLinkActive="active"
+            class="nav-link"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/auth/login"
+            routerLinkActive="active"
+            class="nav-link"
+          >
+            Login</a
+          >
+        </li>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn && role === 'FARMER'">
+        <li class="nav-item">
+          <a
+            routerLink="/farmer/dashboard"
+            routerLinkActive="active"
+            class="nav-link"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/farmer/my-crops"
+            routerLinkActive="active"
+            class="nav-link"
+            >My Crops</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/farmer/post-crop"
+            routerLinkActive="active"
+            class="nav-link"
+            >Post Crop</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/farmer/profile"
+            routerLinkActive="active"
+            class="nav-link"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/farmer/receipts"
+            routerLinkActive="active"
+            class="nav-link"
+            >Receipt</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn && role === 'DEALER'">
+        <li class="nav-item">
+          <a
+            routerLink="/dealer/dashboard"
+            routerLinkActive="active"
+            class="nav-link"
+            >Dashboard</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            routerLink="/dealer/purchases"
+            routerLinkActive="active"
+            class="nav-link"
+            >Purchase</a
+          >
+        </li>
+        <!-- <li class="nav-item">
+          <a routerLink="/dealer/notification" routerLinkActive="active" class="nav-link">Notification</a>
+        </li> -->
+        <li class="nav-item">
+          <a
+            routerLink="/dealer/invoices"
+            routerLinkActive="active"
+            class="nav-link"
+            >Receipt</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/dealer/profile"
+            routerLinkActive="active"
+            class="nav-link"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="isLoggedIn && role === 'ADMIN'">
+        <li class="nav-item">
+          <a
+            routerLink="/admin/dashboard"
+            routerLinkActive="active"
+            class="nav-link"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/admin/farmers"
+            routerLinkActive="active"
+            class="nav-link"
+            >Farmers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/admin/dealers"
+            routerLinkActive="active"
+            class="nav-link"
+            >Dealers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" (click)="logout()">Logout</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

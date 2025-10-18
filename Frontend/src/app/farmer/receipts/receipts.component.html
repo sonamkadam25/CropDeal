@@ -1,0 +1,19 @@
+<div class="receipts-container">
+  <h2>Payment Receipts</h2>
+
+  <div *ngIf="loading" class="loading-text">Loading receipts...</div>
+  <div *ngIf="errorMessage" class="error-text">{{ errorMessage }}</div>
+  <div *ngIf="!loading && receipts.length === 0" class="no-receipts">
+    No receipts found.
+  </div>
+
+  <div *ngFor="let receipt of receipts" class="receipt-card">
+    <p><strong>Receipt ID:</strong> {{ receipt.id }}</p>
+    <p><strong>Farmer Name:</strong> {{ receipt.farmerName }}</p>
+    <p><strong>Amount Paid:</strong> ₹{{ receipt.amount }}</p>
+    <p><strong>Crop Name:</strong> {{ receipt.cropName }}</p>
+    <p><strong>Date:</strong> {{ receipt.date | date : "medium" }}</p>
+
+    <button (click)="downloadReceipt(receipt)">Download</button>
+  </div>
+</div>
