@@ -1,0 +1,1 @@
+import{c as i,h as p}from"./chunk-YHE6EI6Y.js";import"./chunk-VARBTXGR.js";import{Ea as t,Kb as m,Ua as n}from"./chunk-LATPFVPJ.js";var r=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-admin"]],decls:1,vars:0,template:function(e,s){e&1&&n(0,"router-outlet")},dependencies:[p,i,m],encapsulation:2})};export{r as AdminComponent};

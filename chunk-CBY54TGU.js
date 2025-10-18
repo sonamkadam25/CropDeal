@@ -1,0 +1,1 @@
+import{c as a,h as m}from"./chunk-YHE6EI6Y.js";import"./chunk-VARBTXGR.js";import{Ea as t,Kb as r,Ua as n}from"./chunk-LATPFVPJ.js";var p=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-dealer"]],decls:1,vars:0,template:function(e,l){e&1&&n(0,"router-outlet")},dependencies:[m,a,r],encapsulation:2})};export{p as DealerComponent};

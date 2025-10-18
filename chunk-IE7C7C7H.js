@@ -1,0 +1,1 @@
+import{c as m,h as a}from"./chunk-YHE6EI6Y.js";import"./chunk-VARBTXGR.js";import{Ea as t,Kb as n,Ua as r}from"./chunk-LATPFVPJ.js";var p=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-farmer"]],decls:1,vars:0,template:function(e,s){e&1&&r(0,"router-outlet")},dependencies:[a,m,n],encapsulation:2})};export{p as FarmerComponent};
