@@ -4,18 +4,18 @@ CropDeal is a microservice-based crop trading platform that bridges the gap betw
 
 ---
 
-## 1️⃣ Scope of Application
+### 1️⃣ Scope of Application
 
 The CropDeal application addresses the challenges faced by farmers in selling their crops at fair prices by providing a digital marketplace that directly connects Farmers and Dealers — eliminating middlemen, commissions, and delays.
 The system ensures:
 
-       Transparent crop pricing
+ Transparent crop pricing
 
-       Easy crop posting and searching
+ Easy crop posting and searching
 
-       Secure authentication
+ Secure authentication
 
-       Seamless payment management
+ Seamless payment management
 
 ---
 
