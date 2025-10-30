@@ -9,17 +9,17 @@ CropDeal is a microservice-based crop trading platform that bridges the gap betw
 The CropDeal application addresses the challenges faced by farmers in selling their crops at fair prices by providing a digital marketplace that directly connects Farmers and Dealers — eliminating middlemen, commissions, and delays.
 The system ensures:
 
- Transparent crop pricing
+ 1. Transparent crop pricing
 
- Easy crop posting and searching
+ 2. Easy crop posting and searching
 
- Secure authentication
+ 3. Secure authentication
 
- Seamless payment management
+ 4. Seamless payment management
 
 ---
 
-2️⃣ Case Study Overview
+### 2️⃣ Case Study Overview
 
 | Parameter             | Details                 |
 | --------------------- | ----------------------- |
@@ -34,7 +34,7 @@ The system ensures:
 
 ---
 
-3️⃣ Stakeholders
+### 3️⃣ Stakeholders
 
 | Stakeholder | Responsibilities                                                    |
 | ----------- | ------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ The system ensures:
 
 ---
 
-4️⃣ Microservices and Responsibilities
+### 4️⃣ Microservices and Responsibilities
 
 | Service Name        | Port | Responsibilities                                    |
 | ------------------- | ---- | --------------------------------------------------- |
@@ -60,7 +60,7 @@ The system ensures:
 
 ---
 
-5️⃣ Architecture Diagram
+### 5️⃣ Architecture Diagram
        
              ┌───────────────────────────┐
              │     Angular Frontend      │
@@ -105,7 +105,7 @@ The system ensures:
 
 ---
 
-6️⃣ System Workflow
+### 6️⃣ System Workflow
 
 🔐 Authentication Flow
 
@@ -145,7 +145,7 @@ Activate or deactivate users
 
 ---
 
-7️⃣ Access Control Matrix
+### 7️⃣ Access Control Matrix
 
 | Feature / Endpoint          | Farmer | Dealer |    Admin   |
 | --------------------------- | :----: | :----: | :--------: |
@@ -165,7 +165,7 @@ Activate or deactivate users
 
 ---
 
-8️⃣ Inter-Service Communication
+### 8️⃣ Inter-Service Communication
 
 | Communication                    | Purpose                |
 | -------------------------------- | ---------------------- |
@@ -182,7 +182,7 @@ Activate or deactivate users
 
 ---
 
-9️⃣ Technology Stack
+### 9️⃣ Technology Stack
 
 Spring Boot (3.x) — Microservice development
 
@@ -204,7 +204,7 @@ Angular — Frontend
 
 ---
 
-🌐 Deployment
+### 🌐 Deployment
 
 | Component | Platform     | Status        |
 | --------- | ------------ | ------------- |
@@ -213,6 +213,6 @@ Angular — Frontend
 
 ---
 
-👩‍💻 Author
+### 👩‍💻 Author
 
 Sonam Ravindra Kadam
