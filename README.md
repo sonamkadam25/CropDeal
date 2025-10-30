@@ -43,6 +43,8 @@ Seamless payment management
 | **Admin**   | Manages users, generates reports, activates/deactivates users       |
 
 
+---
+
 4️⃣ Microservices and Responsibilities
 
 | Service Name        | Port | Responsibilities                                    |
@@ -55,6 +57,8 @@ Seamless payment management
 | **Admin Service**   | 8084 | Manage users, generate reports, activate/deactivate |
 | **Payment Service** | 8091 | Handle payments between farmers and dealers         |
 
+
+---
 
 5️⃣ Architecture Diagram
        
@@ -98,6 +102,9 @@ Seamless payment management
              │       MySQL Database       │
              └───────────────────────────┘
 
+
+---
+
 6️⃣ System Workflow
 
 🔐 Authentication Flow
@@ -136,6 +143,8 @@ Generate reports
 
 Activate or deactivate users
 
+---
+
 7️⃣ Access Control Matrix
 
 | Feature / Endpoint          | Farmer | Dealer |    Admin   |
@@ -154,6 +163,8 @@ Activate or deactivate users
 | Activate / Deactivate Users |    ❌   |    ❌   |      ✅     |
 
 
+---
+
 8️⃣ Inter-Service Communication
 
 | Communication                    | Purpose                |
@@ -168,6 +179,8 @@ Activate or deactivate users
 | Payment ↔ Farmer                 | Generate receipt       |
 | Payment ↔ Dealer                 | Generate invoice       |
 
+
+---
 
 9️⃣ Technology Stack
 
@@ -189,12 +202,16 @@ Postman — API testing
 
 Angular — Frontend
 
+---
+
 🌐 Deployment
 
 | Component | Platform     | Status        |
 | --------- | ------------ | ------------- |
 | Frontend  | GitHub Pages | ✅ Live        |
 | Backend   | Render       | ⏳ In Progress |
+
+---
 
 👩‍💻 Author
 
