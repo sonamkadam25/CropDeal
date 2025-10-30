@@ -1,6 +1,8 @@
-🌾 CropDeal
+# 🌾 CropDeal
 
 CropDeal is a microservice-based crop trading platform that bridges the gap between farmers and dealers, ensuring fair trade, transparency, and efficiency. The platform allows farmers to sell their crops directly to dealers, while admins manage and monitor all platform operations.
+
+---
 
 1️⃣ Scope of Application
 
@@ -15,6 +17,8 @@ Secure authentication
 
 Seamless payment management
 
+---
+
 2️⃣ Case Study Overview
 
 | Parameter             | Details                 |
@@ -27,6 +31,8 @@ Seamless payment management
 | **Security**          | JWT (Role-Based Access) |
 | **Roles Supported**   | Farmer, Dealer, Admin   |
 
+
+---
 
 3️⃣ Stakeholders
 
