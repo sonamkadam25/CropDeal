@@ -93,6 +93,7 @@ Seamless payment management
              └───────────────────────────┘
 
 6️⃣ System Workflow
+
 🔐 Authentication Flow
 
 User selects role (Farmer / Dealer / Admin)
