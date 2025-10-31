@@ -1,6 +1,13 @@
 # 🌾 CropDeal
 
-CropDeal is a microservice-based crop trading platform that bridges the gap between farmers and dealers, ensuring fair trade, transparency, and efficiency. The platform allows farmers to sell their crops directly to dealers, while admins manage and monitor all platform operations.
+![Angular](https://img.shields.io/badge/Frontend-Angular-red)
+![SpringBoot](https://img.shields.io/badge/Backend-Spring%20Boot-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
+![JWT](https://img.shields.io/badge/Security-JWT-orange)
+![Microservices](https://img.shields.io/badge/Architecture-Microservices-purple)
+
+**CropDeal** is a **microservice-based crop trading platform** that bridges the gap between **farmers and dealers**, ensuring fair trade, transparency, and efficiency.  
+The platform allows **farmers** to sell their crops directly to **dealers**, while **admins** manage and monitor all platform operations.
 
 ---
 
